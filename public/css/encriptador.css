@@ -1,0 +1,287 @@
+/* propiedades para que 1rem sea equivalente a 10px */
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    background-color: aliceblue;
+}
+
+.app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 2rem;
+}
+
+.nav-buttons{
+    background-color: aliceblue;
+}
+
+.nav-container{
+    width: 0;
+    height: 100vh;
+    position:absolute;
+    overflow: hidden;
+    transition: all ease-in-out 0.5s;
+}
+
+.open{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: aliceblue;
+    transition: all ease-in-out 0.5s;
+}
+
+#close-nav-icon{
+    display: none;
+}
+
+.nav-container ul{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 2rem;
+}
+
+.nav-container a{
+    text-decoration: none;
+    color: #000;
+    font-size: 2.5rem;
+    font-family: sans-serif;
+    font-weight: 300;
+}
+
+.header-img-container{
+    width: 5rem;
+    margin: 0;
+    margin: 1rem;
+}
+
+.header-img-container img{
+    width: 100%;
+}
+
+main{
+    width: 100%;
+}
+
+.text-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-texto{
+    width: 90%;
+    height: 250px;
+    padding: 1rem;
+    font-size: 3rem;
+    font-family: sans-serif;
+    font-weight: 300;
+    border: none;
+    margin-top: 5rem;
+    background-color: aliceblue;
+}
+
+.message-container{
+    margin: 2rem;
+}
+
+.btn-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.btn-container button{
+    width: 90%;
+    padding: 2.5rem 2rem;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    font-weight: 400;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.btn-container button:first-child{
+    background-color: #0070d8;
+    color: white;
+}
+
+.aside-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem;
+    font-family: sans-serif;
+    background-color: white;
+    width: 90%;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+.aside-image-container{
+    display: none;
+}
+
+.aside-container h1{
+    font-size: 2.8rem;
+    font-weight: 400;
+}
+
+.aside-container p{
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+@media screen and (min-width: 768px) {
+
+    .app{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2rem;
+    }
+
+    .nav-buttons{
+        display: none;
+    }
+
+    .nav-container{
+        display: block;
+        position:static;
+        width: 100%;
+        height: fit-content;
+    }
+
+    .nav-container{
+        display: block;
+        width: 100%;
+    }
+
+    .nav-container ul{
+        justify-content: right;
+        flex-direction: row;;
+    }
+    
+    .nav-container a{
+        margin-right: 1rem;
+        font-size: 1.8rem;
+    }
+
+    main{
+        width: 70%;
+        padding: 0 10%;
+    }
+
+    .input-texto{
+        width: 90%;
+        height: 500px;
+        padding: 1rem;
+        font-size: 3rem;
+        font-family: sans-serif;
+        font-weight: 300;
+        border: none;
+        margin-top: 1rem;
+        background-color: aliceblue;
+    }
+
+    .btn-container{
+        flex-direction: row;
+        gap: 2rem;
+    }
+    
+    .btn-container button{
+        width: 50%;
+        padding: 2.5rem 2rem;
+        font-size: 1.5rem;
+        font-family: sans-serif;
+        font-weight: 400;
+        border: none;
+        border-radius: 2rem;
+        cursor: pointer;
+    }
+
+    .aside-image-container{
+        display: block;
+        width: 70%;
+    }
+
+    .aside-image-container img{
+        width: 100%;
+    }
+
+    .aside-container{
+        padding: 2.5rem;
+        font-family: sans-serif;
+        background-color: white;
+        width: 30%;
+        height: 90vh;
+        border-radius: 2rem;
+        text-align: center;
+    }
+    
+    .aside-container h1{
+        font-size: 2rem;
+        font-weight: 400;
+    }
+    
+    .aside-container p{
+        font-size: 1rem;
+        font-weight: 300;
+    }
+    
+    #copiar-btn{
+        display: none;
+        padding: 0.5rem 1rem;
+        background-color: transparent;
+        border-radius: 2rem;
+        border: 1px solid #0070d8;
+    }
+
+    #copiar-btn:hover{
+        background-color: #0070d8;
+        color: white;
+        cursor: pointer;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    
+    .aside-container{
+        padding: 3.5rem;
+        font-family: sans-serif;
+        background-color: white;
+        width: 25%;
+        height: 90vh;
+        border-radius: 2rem;
+        text-align: center;
+    }
+    
+    .aside-container h1{
+        font-size: 2.2rem;
+        font-weight: 400;
+    }
+    
+    .aside-container p{
+        font-size: 1.8rem;
+        font-weight: 300;
+    }
+    
+}

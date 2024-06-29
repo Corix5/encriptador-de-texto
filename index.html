@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="public/css/normalize.css" />
+    <link rel="stylesheet" href="public/css/encriptador.css" />
+    <title>Encriptador App</title>
+  </head>
+  <body>
+    <section class="nav-buttons">
+      <svg
+        onclick="abrirNav()"
+        xmlns="http://www.w3.org/2000/svg"
+        id="open-nav-icon"
+        class="icon icon-tabler icon-tabler-layout-sidebar-left-expand"
+        width="40"
+        height="40"
+        viewBox="0 0 24 24"
+        stroke-width="1"
+        stroke="#000000"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path
+          d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+        />
+        <path d="M9 4v16" />
+        <path d="M14 10l2 2l-2 2" />
+      </svg>
+
+      <svg
+        onclick="cerrarNav()"
+        xmlns="http://www.w3.org/2000/svg"
+        id="close-nav-icon"
+        class="icon icon-tabler icon-tabler-layout-sidebar-left-collapse"
+        width="40"
+        height="40"
+        viewBox="0 0 24 24"
+        stroke-width="1"
+        stroke="#000000"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path
+          d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+        />
+        <path d="M9 4v16" />
+        <path d="M15 10l-2 2l2 2" />
+      </svg>
+    </section>
+
+    <nav class="nav-container">
+      <ul id="nav-list">
+        <a href="index.html">Inicio</a>
+        <a href="acerca-de-mi.html">Acerca de mi</a>
+      </ul>
+    </nav>
+
+    <div class="app">
+      <main>
+        <div class="text-container">
+          <textarea
+            placeholder="Ingrese el texto aquí"
+            id="texto"
+            class="input-texto"
+          ></textarea>
+        </div>
+
+        <figure class="message-container">
+          <img src="public/img/Frame1.png" alt="Condiciones" />
+        </figure>
+
+        <div class="btn-container">
+          <button onclick="colocaTextoEncriptado()" class="btn-encriptar">Encriptar</button>
+          <button onclick="colocaTextoDesencriptado()" class="btn-desencriptar">Desencriptar</button>
+        </div>
+      </main>
+
+      <aside class="aside-container">
+        <figure class="aside-image-container">
+          <img src="public/img/find.png" alt="Find text" />
+        </figure>
+        <div>
+          <h1 id="titulo">Ningún mensaje fue encontrado</h1>
+          <p id="textoColocado">Ingresa el texto que desee encriptar o desencriptar</p>
+        </div>
+
+        <button id="copiar-btn" onclick="copiar()">Copiar</button>
+      </aside>
+    </div>
+
+    <script src="public/js/encriptador.js"></script>
+    <script src="public/js/efectos.js"></script>
+  </body>
+</html>
