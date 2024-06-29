@@ -150,6 +150,15 @@ main{
     font-weight: 300;
 }
 
+#copiar-btn{
+    display: none;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border-radius: 2rem;
+    border: 1px solid #0070d8;
+    width: 90%;
+}
+
 @media screen and (min-width: 768px) {
 
     .app{
@@ -247,11 +256,7 @@ main{
     }
     
     #copiar-btn{
-        display: none;
-        padding: 0.5rem 1rem;
-        background-color: transparent;
-        border-radius: 2rem;
-        border: 1px solid #0070d8;
+        width: 50%;
     }
 
     #copiar-btn:hover{

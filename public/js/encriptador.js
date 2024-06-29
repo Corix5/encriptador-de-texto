@@ -9,9 +9,10 @@ const clavesEncriptacion = {
 }
 
 function obtenerTexto(){
-    var texto = document.getElementById("texto").value;
+    let texto = document.getElementById("texto").value;
     document.getElementById('titulo').style.display = 'none';
     document.getElementById('copiar-btn').style.display = 'block';
+    document.querySelector('textarea').value = "";
     return texto;
 }
 
@@ -34,7 +35,9 @@ function desencriptar(textoIngresado){
     let textoDesencriptado = textoIngresado;
     for(const clave in clavesEncriptacion){
         if(textoIngresado.includes(clavesEncriptacion[clave])){
-            textoDesencriptado = textoDesencriptado.replace(clavesEncriptacion[clave], clave);
+            // expresion regular para reemplazar todas las ocurrencias
+            let regex = new RegExp(clavesEncriptacion[clave], 'g');
+            textoDesencriptado = textoDesencriptado.replace(regex, clave);
         }
     }
     return textoDesencriptado;
@@ -43,14 +46,12 @@ function desencriptar(textoIngresado){
 //colocar texto encriptado en aside
 function colocaTextoEncriptado(){
     let textoColocado = encriptar(obtenerTexto());
-    console.log(textoColocado);
     document.querySelector('#textoColocado').innerHTML = textoColocado;
 }
 
 //colocar texto desencriptado en aside
 function colocaTextoDesencriptado(){
     let textoColocado = desencriptar(obtenerTexto());
-    console.log(textoColocado);
     document.querySelector('#textoColocado').innerHTML = textoColocado;
 }
 
