@@ -3,6 +3,7 @@
 html{
     font-size: 62.5%;
     box-sizing: border-box;
+    position: relative;
 }
 
 *, *:before, *:after{
@@ -24,6 +25,7 @@ body{
 
 .nav-buttons{
     background-color: #02040a;
+    width: 100%;
 }
 
 .nav-container{
