@@ -10,7 +10,7 @@ html{
 }
 
 body{
-    background-color: aliceblue;
+    background-color: #0d1116;
 }
 
 .app{
@@ -23,7 +23,7 @@ body{
 }
 
 .nav-buttons{
-    background-color: aliceblue;
+    background-color: #02040a;
 }
 
 .nav-container{
@@ -38,7 +38,7 @@ body{
     position: absolute;
     width: 100%;
     height: 100vh;
-    background-color: aliceblue;
+    background-color: #02040a;
     transition: all ease-in-out 0.5s;
 }
 
@@ -56,10 +56,28 @@ body{
 
 .nav-container a{
     text-decoration: none;
-    color: #000;
+    color: white;
     font-size: 2.5rem;
     font-family: sans-serif;
     font-weight: 300;
+}
+
+.nav-container a:hover{
+    color: #4e87de;
+    transition: all ease-in-out 0.2s;
+}
+
+.nav-container a::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #4e87de;
+    transition: all ease-in-out 0.2s;
+}
+
+.nav-container a:hover::after{
+    width: 100%;
 }
 
 .header-img-container{
@@ -92,7 +110,8 @@ main{
     font-weight: 300;
     border: none;
     margin-top: 5rem;
-    background-color: aliceblue;
+    background-color: #0d1116;
+    color: white;
 }
 
 .message-container{
@@ -119,8 +138,15 @@ main{
 }
 
 .btn-container button:first-child{
-    background-color: #0070d8;
+    background-color: #1f6feb;
     color: white;
+}
+
+.btn-container button:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: all ease-in-out 0.2s;
 }
 
 .aside-container{
@@ -130,7 +156,7 @@ main{
     align-items: center;
     padding: 2.5rem;
     font-family: sans-serif;
-    background-color: white;
+    background-color: #131d2d;
     width: 90%;
     border-radius: 2rem;
     text-align: center;
@@ -143,20 +169,30 @@ main{
 .aside-container h1{
     font-size: 2.8rem;
     font-weight: 400;
+    color: white;
 }
 
 .aside-container p{
     font-size: 2rem;
     font-weight: 300;
+    color: white;
 }
 
 #copiar-btn{
     display: none;
     padding: 0.5rem 1rem;
-    background-color: transparent;
+    background-color: #0070d8;
     border-radius: 2rem;
     border: 1px solid #0070d8;
     width: 90%;
+    color: white;
+}
+
+#copiar-btn:hover{
+    background-color: #035eb4;
+    color: white;
+    cursor: pointer;
+    transition: all ease-in-out 0.2s;
 }
 
 @media screen and (min-width: 768px) {
@@ -207,7 +243,6 @@ main{
         font-weight: 300;
         border: none;
         margin-top: 1rem;
-        background-color: aliceblue;
     }
 
     .btn-container{
@@ -238,7 +273,6 @@ main{
     .aside-container{
         padding: 2.5rem;
         font-family: sans-serif;
-        background-color: white;
         width: 30%;
         height: 90vh;
         border-radius: 2rem;
@@ -259,12 +293,6 @@ main{
         width: 50%;
     }
 
-    #copiar-btn:hover{
-        background-color: #0070d8;
-        color: white;
-        cursor: pointer;
-    }
-
 }
 
 @media screen and (min-width: 1024px) {
@@ -272,7 +300,6 @@ main{
     .aside-container{
         padding: 3.5rem;
         font-family: sans-serif;
-        background-color: white;
         width: 25%;
         height: 90vh;
         border-radius: 2rem;
